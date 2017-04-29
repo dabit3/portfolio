@@ -1,0 +1,58 @@
+<div style="margin-top:20px;">
+	<a href="#/" >Back to menu</a>
+</div>
+<h5>Live Music</h5>
+<div style="margin:20px 0px;">
+	<a href="#/music/new" class="btn blue">Add New Live Music</a>
+</div>
+
+<div ng-init="city = 'hattiesburg' ">
+		<button class="btn blue" ng-click="city = 'hattiesburg' ">Hattiesburg</button>
+		<button class="btn blue" ng-click="city = 'madison' ">Madison</button>
+		<button class="btn blue" ng-click="city = 'flowood' ">Flowood</button>
+		<button class="btn blue" ng-click="city = 'brookhaven' ">Brookhaven</button>
+</div>
+
+<div ng-if="city == 'hattiesburg' " style="padding-bottom:30px;padding-top:10px">
+	<h4>Hattiesburg Music Lineup</h4>
+	<div ng-repeat="music in hattiesburgMusic" class="musicrepeater" >
+			<h5>{{music.name}}</h5>
+			<p class="musicdate">{{music.date | amDateFormat:'MMMM Do YYYY'}}</p>
+			<p ng-if="music.starttime">From {{music.starttime}} until {{music.endtime}}</p>
+			<a class="musicdelete" ng-click="deleteHattiesburg(music, music.id)">Delete</a>
+	</div>
+	<div ng-if="hattiesburgMusic.length < 1">No future performances to show...</div>
+</div>
+
+<div ng-if="city == 'madison' " style="padding-bottom:30px;padding-top:10px">
+	<h4>Madison Music Lineup</h4>
+	<div ng-repeat="music in madisonMusic" class="musicrepeater">
+			<h5>{{music.name}}</h5>
+			<p class="musicdate">{{music.date | amDateFormat:'MMMM Do YYYY'}}</p>
+			<p ng-if="music.starttime">From {{music.starttime}} until {{music.endtime}}</p>
+			<a class="musicdelete" ng-click="deleteMadison(music, music.id)">Delete</a>
+	</div>
+	<div ng-if="madisonMusic.length < 1">No future performances to show...</div>
+</div>
+
+<div ng-if="city == 'flowood' " style="padding-bottom:30px;padding-top:10px">
+	<h4>Flowood Music Lineup</h4>
+	<div ng-repeat="music in flowoodMusic" class="musicrepeater">
+			<h5>{{music.name}}</h5>
+			<p class="musicdate">{{music.date | amDateFormat:'MMMM Do YYYY'}}</p>
+			<p ng-if="music.starttime">From {{music.starttime}} until {{music.endtime}}</p>
+			<a class="musicdelete" ng-click="deleteFlowood(music, music.id)">Delete</a>
+	</div>
+	<div ng-if="flowoodMusic.length < 1">No future performances to show...</div>
+</div>
+
+<div ng-if="city == 'brookhaven' " style="padding-bottom:30px;padding-top:10px">
+	<h4>Brookhaven Music Lineup</h4>
+	<div ng-repeat="music in brookhavenMusic" class="musicrepeater">
+			<h5>{{music.name}}</h5>
+			<p class="musicdate">{{music.date | amDateFormat:'MMMM Do YYYY'}}</p>
+			<p ng-if="music.starttime">From {{music.starttime}} until {{music.endtime}}</p>
+			<a class="musicdelete" ng-click="deleteBrookhaven(music, music.id)">Delete</a>
+	</div>
+	<div ng-if="brookhavenMusic.length < 1">No future performances to show...</div>
+</div>

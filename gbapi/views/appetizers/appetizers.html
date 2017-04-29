@@ -1,0 +1,24 @@
+<div style="margin-top:20px;">
+	<a href="#/menu" >Back to menu</a>
+</div>
+<h5>Appetizers</h5>
+<div style="margin:20px 0px;">
+	<a href="#/appetizer/new" class="btn blue">Create New Appetizer</a>
+	</div>
+<ul ng-if="items" class="collection with-header">
+	<li ng-repeat="item in items" class="collection-item">
+		<div>
+			<a href="#/appetizer/{{item.id}}">{{item.name}}</a>
+			
+			<a style="cursor:pointer;" class="secondary-content" ng-click="deleteAppetizer(item, item.id); ">
+				<i class="material-icons" style="color: #f44336 !important">delete</i>
+			</a>
+		</div>
+	</li>        
+</ul>
+
+<div ng-if="!items" style="text-align:center;padding: 50px 0px;">
+	<h4 class="grayspinner">
+		<i class="fa fa-spinner spinning"></i>
+	</h4>
+</div>

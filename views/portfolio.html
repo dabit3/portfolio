@@ -1,0 +1,12 @@
+<div ng-controller="PortfolioCtrl" >
+	<section class="portfolio-nav-wrapper">
+		<nav class="portfolio-nav">
+		<ul>
+			<a ui-sref="index.shots.usoga.one" ng-click="shotsClass()"><li ng-class="{'clickShots': shotsPage}">SHOTS</li></a>
+			<a ui-sref="index.sites" ng-click="sitesClass()"><li ng-class="{'clickSites': sitesPage}">SITES</li></a>
+		</ul>
+	</nav>
+	</section>
+	
+	<div ui-view ></div>
+</div>

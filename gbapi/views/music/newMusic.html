@@ -1,0 +1,45 @@
+<div style="margin-bottom: 20px;border-bottom: 1px solid #efefef;padding-bottom: 15px;">
+  <h4 style="margin-top:40px;">Add Performer</h4>&nbsp; <a href="#/music">View Performers</a>
+</div>
+
+<div class="row" style="margin-bottom:60px;">
+   <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input ng-model="name"  type="text" class="validate" required>
+          <label>Name</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input ng-model="starttime"  type="text" class="validate" required>
+          <label>From</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <input ng-model="endtime"  type="text" class="validate" required>
+          <label>Until</label>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="input-field col s12">
+          <label for="inputCreated">Date</label>
+          <input id="inputCreated" type="text" input-date ng-model="date" class="datepicker">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12">
+          <select ng-model="location" ng-options="location.location for location in locations">
+            <option value="">Please select a location...</option>
+          </select>
+          <label>Location</label>
+        </div>
+      </div>
+     <a class="waves-effect waves-light btn" ng-click="addPerformer();">Submit</a>
+    </form>
+  </div>

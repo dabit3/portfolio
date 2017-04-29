@@ -1,0 +1,110 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/css/materialize.min.css">
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+  <script src="initializer.js"></script>
+  <script src="bower_components/lodash/lodash.min.js"></script>
+  <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.1/js/materialize.min.js"></script>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-ui-notification/dist/angular-ui-notification.min.css" />
+    <link rel="stylesheet" href="bower_components/materialize/bin/materialize.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+  </head>
+  <body ng-app="apifrontendApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Add your site or application content here -->
+
+    <nav class="grey lighten-5">
+      <div class="nav-wrapper">
+        <a style="color:#b2b2b2;padding-left:20px;" href="#/" class="brand-logo">GB API</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="active"><a style="color:#b2b2b2"  href="#/">Home</a></li>
+          <li><a style="color: #b2b2b2" ng-href="#/menu">Menu</a></li>
+          <li><a style="color:#b2b2b2" ng-href="#/">Drinks</a></li>
+          <li><a style="color:#b2b2b2" ng-href="#/">Music</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    
+
+    <div class="container">
+    <div ng-view=""></div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <p><span class="glyphicon glyphicon-heart"></span> from the Digital Dojo team</p>
+      </div>
+    </div>
+
+
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+     <script>
+       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
+       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
+       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
+       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+       ga('create', 'UA-XXXXX-X');
+       ga('send', 'pageview');
+    </script>
+
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-touch/angular-touch.js"></script>
+    <script src="bower_components/angular-ui-notification/dist/angular-ui-notification.min.js"></script>
+    <script src="bower_components/materialize/bin/materialize.js"></script>
+    <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
+    <script src="bower_components/moment/moment.js"></script>
+    <script src="bower_components/angular-moment/angular-moment.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services/MenuItemsService.js"></script>
+        <script src="scripts/services/MusicItemsService.js"></script>
+        <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/controllers/about.js"></script>
+        <script src="scripts/controllers/MenuController.js"></script>
+        <script src="scripts/controllers/AppetizerController.js"></script>
+        <script src="scripts/controllers/SaladsController.js"></script>
+        <script src="scripts/controllers/PastaController.js"></script>
+        <script src="scripts/controllers/EntreeController.js"></script>
+        <script src="scripts/controllers/SandwichesAndBasketsController.js"></script>
+        <script src="scripts/controllers/DessertsController.js"></script>
+        <script src="scripts/controllers/BluePlateController.js"></script>
+        <script src="scripts/controllers/BluePlateBrookhaven.js"></script>
+        <script src="scripts/controllers/BluePlateFlowood.js"></script>
+        <script src="scripts/controllers/BluePlateHattiesburg.js"></script>
+        <script src="scripts/controllers/BluePlateMadison.js"></script>
+        <script src="scripts/controllers/MusicController.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

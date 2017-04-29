@@ -1,0 +1,99 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>Javascript Animations with Greensock | Page Two</h3>
+			<h4>TweenLite &amp; TweenMax</h4>
+			<p>- Basically the same library</p>
+			<p>- TweenLite is lightweight version of TweenMax</p>
+			<p>- TweenLite doesn't have certain functions (yoyo, repeat, rounding)</p>
+
+			<h4>TimelineLite &amp; TimelineMax</h4>
+			<p>- Also basically the same library</p>
+			<p>- TimelineLite is lightweight version of TimelineMax</p>
+			<p>- TimelineLite doesn't have certain functions (yoyo, repeat, rounding)</p>
+			<p>Methods available only to TimelineMax:</p>
+			<div class="code">
+				<section>
+					currentLabel()<br />
+					getActive()<br />
+					getLabelAfter()<br />
+					getLabelBefore()<br />
+					getlLabelsArray()<br />
+					repeat()<br />
+					repeatDelay()<br />
+					tweenFromTo()<br />
+					tweenTo()<br />
+					yoyo()<br />
+				</section>
+			</div>
+			<div class="my-full-divider"></div>
+		
+			<p style="margin-top:22px;color:#00b89d">Animations take a minimum of three arguments: </p>
+				<ol class="blog-ol">
+					<li>Item being animated</li>
+					<li>Length of animation (in seconds)</li>
+					<li>Object containing css properties</li>
+				</ol>
+				<div class="code">
+					<section>
+					
+						&nbsp;&nbsp;TweenLite.to(item, time, {object});<br />
+						
+					</section>
+				</div>
+
+			<h4>Implementation</h4>
+			<div class="code">
+				<section>
+					&lt;script src="http://www.naderdabit.me/greensock/TweenMax.min.js"&gt;&lt;/script&gt;
+					<br /><br />
+					window.onload = function(){ <br />
+					&nbsp;&nbsp;var logo = document.getElementById("logo");<br />
+					&nbsp;&nbsp;TweenLite.to(logo, 1, {left:"632px"});<br />
+					}
+				</section>
+			</div>			
+
+			<h4>Implementation with jQuery</h4>
+			<div class="code">
+				<section>
+					&lt;script src="http://www.naderdabit.me/greensock/TweenMax.min.js"&gt;&lt;/script&gt;<br/>
+					&lt;script src="//code.jquery.com/jquery-1.11.0.min.js"&gt;&lt;/script&gt;
+					<br /><br />
+					window.onload = function(){ <br />
+					
+					&nbsp;&nbsp;var logo = $('#logo');<br />
+					&nbsp;&nbsp;TweenLite.to(logo, 1, {left:"632px"});<br />
+					}
+				</section>			
+			</div>
+			
+			<div class="my-full-divider"></div>
+
+			<h4>TweenLite Codepen Example</h4>
+			<div class="codepen">
+				<iframe src="http://codepen.io/dabit3/embed/rGfyp" frameborder="0"></iframe>
+			</div>
+	
+			<p style="margin-top:22px;color:#00b89d"><a href="https://greensock.com/docs/#/HTML5/Easing/" target="_blank">View easing options -></a></p>
+
+			<h4>TweenMax Codepen Example</h4>
+			<div class="codepen">
+				<iframe src="http://codepen.io/dabit3/embed/ymqlJ" frameborder="0"></iframe>
+			</div>
+
+			<h4>TimlineLite Codepen Example</h4>
+			<div class="codepen" >
+				<iframe  src="http://codepen.io/dabit3/embed/rDzpA" frameborder="0"></iframe>
+			</div>
+
+			<h4>TimlineMax Codepen Example</h4>
+			<div class="codepen" >
+				<iframe  src="http://codepen.io/dabit3/embed/CnqbI" frameborder="0"></iframe>
+			</div>			
+
+			<a ui-sref="pageone"><div class="blog-nav" ng-click="ScrollTop()">prev</div></a>
+			<a ui-sref="pagethree"><div class="blog-nav" ng-click="ScrollTop()">next</div></a>
+		</div>
+	</section>
+</div>

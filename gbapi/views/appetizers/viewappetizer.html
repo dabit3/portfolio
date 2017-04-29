@@ -1,0 +1,19 @@
+<div>
+  <h4 style="margin-top:40px;">View Appetizer</h4>
+  <button class='btn red' ng-click="deleteAppetizer2(editableitem, editableitem.id)">Delete Appetizer</button>
+  &nbsp; <a href="#/appetizers">View Appetizers</a>
+</div>
+
+<div ng-if="editableitem" class="row" style="box-shadow: inset 0px 1px 1px rgba(0,0,0,.12), 0px 1px 1.5px rgba(0,0,0,.24);border-radius:3px;margin-bottom: 60px;padding: 20px;background-color: #F7F7F7;margin-top: 20px">
+  <h2 style="margin-top:0;" class="apiitemheader">{{editableitem.name}}</h2>
+  <b class="apiitemprice">${{editableitem.price}}</b>
+  <p style="color: #a0a0a0">{{editableitem.description}}</p>
+  <p ng-if="editableitem.icon">Icon - <b>{{editableitem.icon}}</b></p>
+  <p ng-if="!editableitem.icon" class="lead">No icon chosen</p>
+</div>
+
+<div ng-if="!editableitem" style="text-align:center;padding: 50px 0px;">
+	<h4 class="grayspinner">
+		<i class="fa fa-spinner spinning"></i>
+	</h4>
+</div>

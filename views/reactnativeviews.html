@@ -1,0 +1,62 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>React Native - Find View Width and Height</h3>
+			<p>After spending some time with React Native, I came across an instance where I needed the view width of the device I was working on, and it took me a while to find the information. I decided to post a quick way to get the view width and height in React native. </p><br />
+			<h4>Step 1 - Add a function to the outer view container (either main View or ScrollView). We are using the <a href="https://facebook.github.io/react-native/docs/view.html#onlayout" target="blank">onLayout</a> function provided by React Native.</h4>
+				<section style="margin-top:20px">
+					<style type="text/css">
+pre.CICodeFormatter{
+	font-family:arial;
+	font-size:12px;
+	width:99%;
+	height:auto;
+	overflow:auto;
+	background:#f0f0f0;
+	line-height:20px;
+	padding:10px;
+	color:#000000;
+	text-align:left;
+}
+pre.CICodeFormatter code{
+	color:#000000;
+	word-wrap:normal;
+}
+</style>
+<pre class="CICodeFormatter" ><code class="CICodeFormatter"> &lt;View onLayout={this.logLayout} &gt;   
+</code></pre>
+				</section>
+			<br />
+			<h4>Step 2 - Define the logLayout function we used in the above code snippet (this should go in the React class / component, but not in the render method).</h4>
+				<section style="margin-top:20px">
+				<style type="text/css">
+pre.CICodeFormatter{
+	font-family:arial;
+	font-size:12px;
+	width:99%;
+	height:auto;
+	overflow:auto;
+	background:#f0f0f0;
+	line-height:20px;
+	
+	padding:10px;
+	color:#000000;
+	text-align:left;
+}
+pre.CICodeFormatter code{
+	color:#000000;
+	word-wrap:normal;
+}
+</style>
+<pre class="CICodeFormatter" ><code class="CICodeFormatter"> logLayout(event){  
+   var width = event.nativeEvent.layout.width;  
+   console.log("Width: " + width);  
+   console.log(event.nativeEvent.layout);  
+ }  
+</code></pre>
+								</section>
+								<p style="margin-top:15px">onLayout is called when the view is loaded.  "event.nativeEvent.layout" returns an object with the x-axis value, y-axis value, width and height of the container the the onLayout method is called upon. This could also be useful in finding the position of items in the view.</p>
+								<p><small style="text-align:left;font-size:14px !important">Errors, comments, or questions: email me at <a href="mailto:dabit3@gmail.com">dabit3@gmail.com</a></small></p>
+		</div>
+	</section>
+</div>

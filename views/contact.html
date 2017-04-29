@@ -1,0 +1,21 @@
+<div class="contact-page" >
+	<section>
+		<div class="contact-header">
+			<h3>Contact <span class="green-span">//</span></h3>
+		</div>
+	</section>
+    <section>
+        <a href ng-click="banner = 'one'">One</a>
+        <a href ng-click="banner = 'two'">Two</a>
+        <a href ng-click="banner = 'three'">Three</a>
+        <a href ng-click="banner = 'four'">Four</a>
+        <a href ng-click="banner = 'five'">Five</a>
+    </section>
+    <section class="showing-container">
+        <div class="showingImage" ng-show="banner == 'one'"><img ng-src="http://nicenicejpg.com/300" alt=""/></div>
+        <div class="showingImage" ng-show="banner == 'two'"><img  ng-src="http://fillmurray.com/300/300" alt=""/></div>
+        <div class="showingImage" ng-show="banner == 'three'"><img ng-src="http://placecage.com/c/300/300" alt=""/></div>
+        <div class="showingImage" ng-show="banner == 'four'"><img ng-src="http://placebear.com/300/300 " alt=""/></div>
+        <div class="showingImage" ng-show="banner == 'five'"><img ng-src="http://baconmockup.com/300/300" alt=""/></div>
+    </section>
+</div>

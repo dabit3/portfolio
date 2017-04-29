@@ -1,0 +1,141 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>Ionic Framework | Page Four</h3>
+			<h4>Building out our app</h4>
+			<p>Open index.html and add the following code:</p>
+			<div class="code">
+				<section>
+					&lt;!DOCTYPE html&gt; <br />
+					 &lt;html lang="en"&gt; <br />
+						&nbsp; &lt;head&gt; <br />
+					  &nbsp; &nbsp;	&lt;meta charset="UTF-8"&gt; <br />
+						&nbsp; &nbsp;	&lt;title>Freshly Pressed&lt;/title&gt; <br />
+					  &nbsp; &lt;/head&gt; <br />
+						&nbsp;  &lt;body&gt; <br />
+						<br />
+						&nbsp;  &lt;/body&gt; <br />
+						 &lt;/html&gt; <br />
+				</section> 
+			</div>
+			<br />
+			<p>Next, add Ionic Libraries</p>
+			<div class="code">
+				<section>
+					&lt;link rel="stylesheet" href="lib/ionic/css/ionic.min.css"&gt; <br />
+				  &lt;script src="lib/ionic/js/ionic.bundle.min.js"&gt;&lt;/script&gt;
+				</section>
+			</div>
+			<br />
+			<p>Here's how our index.html file should look:</p>
+			<div class="code">
+				<section>
+					&lt;!DOCTYPE html&gt; <br />
+					 &lt;html lang="en"&gt; <br />
+						&nbsp; &lt;head&gt; <br />
+					  &nbsp; &nbsp;	&lt;meta charset="UTF-8"&gt; <br />
+						&nbsp; &nbsp;	&lt;title>Freshly Pressed&lt;/title&gt; <br />
+						&nbsp; &nbsp; &lt;link rel="stylesheet" href="lib/ionic/css/ionic.min.css"&gt; <br />
+				  	&nbsp; &nbsp; &lt;script src="lib/ionic/js/ionic.bundle.min.js"&gt;&lt;/script&gt;<br />
+					  &nbsp; &lt;/head&gt; <br />
+						&nbsp;  &lt;body&gt; <br />
+						<br />
+						&nbsp;  &lt;/body&gt; <br />
+						 &lt;/html&gt; <br />
+				</section>
+			</div>
+			<br />
+			<p>Now add app CSS &amp; JavaScript</p>
+			<div class="code">
+				<section>
+					&lt;link rel="stylesheet" href="css/style.css"&gt; <br />
+					&lt;script src="js/app.js"&gt;&lt;/script&gt;
+				</section>
+			</div>
+			<br />
+			<p>Add Ionic header directive between body tags</p>
+			<h5><a target="_blank" href="http://ionicframework.com/docs/api/directive/ionHeaderBar/">View Ionic documentation for header bar</a></h5>
+			<div class="code">
+				<section>
+					&lt;ion-header-bar align-title="center" class="bar-positive"&gt;<br />
+					&nbsp; &lt;h1 class="title"&gt;Freshly Pressed&lt;/h1&gt;<br />
+					&lt;/ion-header-bar&gt;
+				</section>
+			</div>
+			<br />
+			<p>Add ionic content directive below header directive</p>
+			<h5><a href="http://ionicframework.com/docs/api/directive/ionContent/" target="_blank">View Ionic documentation for content</a></h5>
+			<div class="code">
+				<section>
+					&lt;ion-content&gt; <br />
+					&nbsp; &lt;h1&gt;Content Here&lt;/h1&gt;<br />
+					&lt;/ion-content&gt;
+				</section>
+			</div>
+			<br />
+			<p>Next, initiate the Angular application.</p>
+			<p>Open app.js and add the following:</p>
+			<div class="code">
+				<section>
+					var App = angular.module("App", ["ionic"]);<br /><br />
+					
+					App.controller("AppCtrl", ["$scope", AppCtrl]);<br /><br />
+					
+					function AppCtrl($scope) { <br />
+					};
+				</section>
+			</div>
+			<br />
+			<p>Add ng-app directive to index.html</p>
+			<div class="code">
+				<section>
+					&lt;html ng-app="App"&gt;
+				</section>
+			</div>
+			<br />
+			<p>Add controller to body tag</p>
+			<div class="code">
+				<section>
+					&lt;body ng-controller="AppCtrl"&gt;
+				</section>
+			</div>
+			
+			<br />
+			<p>Here's how our index.html file should look now:</p>
+			<div class="code">
+				<section>
+						
+				&lt;!DOCTYPE html&gt; <br />
+					 &lt;html lang="en" ng-app="App"&gt; <br />
+						&nbsp; &lt;head&gt; <br />
+					  &nbsp; &nbsp;	&lt;meta charset="UTF-8"&gt; <br />
+						&nbsp; &nbsp;	&lt;title>Freshly Pressed&lt;/title&gt; <br /><br />
+						&nbsp; &nbsp; &lt;link rel="stylesheet" href="lib/ionic/css/ionic.min.css"&gt; <br />
+				  	&nbsp; &nbsp; &lt;script src="lib/ionic/js/ionic.bundle.min.js"&gt;&lt;/script&gt;<br /><br />
+
+				  	&nbsp; &nbsp;  &lt;link rel="stylesheet" href="css/style.css"&gt; <br />
+						
+					  &nbsp; &lt;/head&gt; <br />
+						&nbsp;  &lt;body ng-controller="AppCtrl"&gt; <br />
+						<br />
+					&nbsp; &nbsp; &nbsp; 	&lt;ion-header-bar align-title="center" class="bar-positive"&gt;<br />
+				&nbsp; &nbsp; &nbsp; &nbsp; 	&nbsp; &lt;h1 class="title"&gt;Freshly Pressed&lt;/h1&gt;<br />
+					&nbsp; &nbsp; &nbsp; &lt;/ion-header-bar&gt;<br /><br />
+					&nbsp;&nbsp; &nbsp; &nbsp;&lt;ion-content&gt; <br />
+				&nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &lt;h1&gt;Content Here&lt;/h1&gt;<br />
+					&nbsp;&nbsp; &nbsp; &nbsp;&lt;/ion-content&gt;
+					<br /><br />
+					&nbsp; &nbsp; &nbsp; &lt;script src="js/app.js"&gt;&lt;/script&gt;<br /><br />	
+				
+						&nbsp;  &lt;/body&gt; <br />
+						 &lt;/html&gt; <br />
+
+				</section>
+			</div>
+
+		<br />
+		<a ui-sref="ionicthree"><div class="blog-nav" ng-click="ScrollTop()">prev</div></a>
+		<a ui-sref="ionicfive"><div class="blog-nav" ng-click="ScrollTop()">next</div></a>	
+		</div>
+	</section>
+</div>

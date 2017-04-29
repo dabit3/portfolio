@@ -1,0 +1,153 @@
+<div ng-controller="ShotsGoCtrl" class="shots-page">
+    <div class="portfolio-shots">
+        <h3>Portfolio <span class="green-span">//</span> Shots</h3>
+    </div>
+    <section class="shot-state-container" ng-controller="ShotsCtrl">
+        <div class="shots-image-wrapper">
+            <!-- Insert Logos Here -->
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.usoga.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-5/usoga.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.martin.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-9/martin-logo.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.msdoc.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-8/msdoc.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.connect.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-7/connect.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.ogp.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-6/ogp.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.ezschedule.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links/myezschedule.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.bridgerssmith.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-4/bridgers-smith.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.hbam.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-3/hbamLogo.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.firstgraphix.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-2/first.jpg" alt="">
+                </a>
+            </div>
+            <div class="shots-image-container">
+                <a ui-sref="index.shots.hamilton.one" ng-click="ScrollTop()">
+                    <img src="img/logo-links-10/hamilton-logo.jpg" alt="">
+                </a>
+            </div>
+
+
+        </div>
+
+        <!-- UI-VEW  -->
+        <div class="shot-display-container">
+            <div ui-view></div>
+        </div>
+
+        <div class="clearfix"></div>
+    </section> <!-- End Shots container -->
+    <section class="responsive-container">
+        <div ng-controller="AccordianCtrl">
+            <accordion close-others="oneAtATime">
+
+                <accordion-group heading="USOGA" is-open="status.isFirstOpen" is-disabled="status.isFirstDisabled">
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-5/usoga-1.jpg" alt="" class="max-width" ng-click="usogaOpen1()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Martin Homes">
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-9/martin-1.jpg" alt="" class="max-width" ng-click="martinOpen1()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Mississippi Department of Corrections" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-8/msdoc-1.jpg" alt="" class="max-width" ng-click="msdocOpen1()">
+
+                        <img src="img/logo-links-8/msdoc-1.jpg" alt="" class="max-width padding-top-img" ng-click="msdocOpen2()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Connect Technology" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-7/connect-1.jpg" class="max-width" ng-click="ctOpen1()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Oil &amp; Gas Platform" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-6/1.jpg" ng-click="ogOpen1()" class="max-width">
+                        <img src="img/logo-links-6/2.jpg" ng-click="ogOpen2()" class="max-width padding-top-img">
+                        <img src="img/logo-links-6/3.jpg" ng-click="ogOpen3()" class="max-width padding-top-img">
+                        <img src="img/logo-links-6/4.jpg" ng-click="ogOpen4()" class="max-width padding-top-img">
+                        <img src="img/logo-links-6/5.jpg" ng-click="ogOpen5()" class="max-width padding-top-img">
+                        <img src="img/logo-links-6/6.jpg" ng-click="ogOpen6()"class="max-width padding-top-img">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="My EzSchedule" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links/ezschedule1.jpg" class="max-width" ng-click="open()">
+                        <img src="img/logo-links/ezschedule2.jpg" class="max-width padding-top-img" ng-click="open2()">
+                        <img src="img/logo-links/ezschedule3.jpg" class="max-width padding-top-img"ng-click="open3()">
+                        <img src="img/logo-links/ezschedule4.jpg" class="max-width padding-top-img" ng-click="open4()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Bridgers Smith" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-4/bridgers-smith-1.jpg" class="max-width" ng-click="bsOpen1()">
+                        <img src="img/logo-links-4/bridgers-smith-2.jpg" class="max-width padding-top-img" ng-click="bsOpen2()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Home Builders Association of Mississippi" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-3/HomeBuildersAssociation.jpg" class="max-width" ng-click="hbamOpen1()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="First Graphix" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-2/firstGraphix-2.jpg" class="max-width" ng-click="fgOpen1()">
+                        <img src="img/logo-links-2/firstGraphix-3.jpg" class="max-width padding-top-img" ng-click="fgOpen2()">
+                        <img src="img/logo-links-2/firstGraphix-4.jpg" class="max-width padding-top-img" ng-click="fgOpen3()">
+                        <img src="img/logo-links-2/firstGraphix-5.jpg" class="max-width padding-top-img" ng-click="fgOpen4()">
+                    </div>
+                </accordion-group>
+
+                <accordion-group heading="Hamilton Custom Homes" >
+                    <div ng-controller="ResponsiveCtrl">
+                        <img src="img/logo-links-10/hamilton-1.jpg" class="max-width" ng-click="hamiltonOpen1()">
+
+                    </div>
+                </accordion-group>
+
+            </accordion>
+        </div><!-- end accordians -->
+
+
+    </section><!-- End Responsive container -->
+</div>

@@ -1,0 +1,9 @@
+[08-Jun-2016 16:26:17] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[08-Jun-2016 16:26:17] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[08-Jun-2016 16:26:17] PHP Fatal error:  Unknown: Failed opening required '/home/ivanucom/public_html/naderdabit.me/gbapi/views/music/list.php' (include_path='.:/opt/alt/php52/usr/share/pear:/opt/alt/php52/usr/share/php') in Unknown on line 0
+[08-Jun-2016 16:26:18] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[08-Jun-2016 16:26:18] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[08-Jun-2016 16:26:18] PHP Fatal error:  Unknown: Failed opening required '/home/ivanucom/public_html/naderdabit.me/gbapi/views/music/list.php' (include_path='.:/opt/alt/php52/usr/share/pear:/opt/alt/php52/usr/share/php') in Unknown on line 0
+[09-Jun-2016 11:02:50] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[09-Jun-2016 11:02:50] PHP Warning:  Unknown: failed to open stream: Permission denied in Unknown on line 0
+[09-Jun-2016 11:02:50] PHP Fatal error:  Unknown: Failed opening required '/home/ivanucom/public_html/naderdabit.me/gbapi/views/music/list.php' (include_path='.:/opt/alt/php52/usr/share/pear:/opt/alt/php52/usr/share/php') in Unknown on line 0

@@ -1,0 +1,29 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>Ionic Framework | Page Three</h3>
+			<h4>Building a real app.</h4>
+			<p>Mobile app fetching stories from Freshly Presses - https://wordpress.com/fresh/</p>
+			<br />
+			<h4>Get Started</h4>
+			<br />
+			<div class="code">
+				<section>
+				$ ionic start freshlypressed <span class="comment">// create project</span><br />
+				$ cd freshlypressed<br />
+				$ cd www <br />
+				$ rm -rf index.html <span class="comment">// delete index.html file</span><br />
+				$ rm -f js templates <span class="comment">// delete js and templates directory</span><br />
+				$ touch index.html <span class="comment">// create new index.html file</span><br />
+				$ mkdir js <span class="comment">// create new js directory</span> <br />
+				$ touch js/app.js <span class="comment">// create new app.js file</span>
+				</section>
+			</div>
+			<br />
+			<h4>What we did</h4>
+			<p>Created new ionic project and cleaned out some files</p>
+		<a ui-sref="ionictwo"><div class="blog-nav" ng-click="ScrollTop()">prev</div></a>
+		<a ui-sref="ionicfour"><div class="blog-nav" ng-click="ScrollTop()">next</div></a>	
+		</div>
+	</section>
+</div>

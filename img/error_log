@@ -1,0 +1,29 @@
+[08-Aug-2016 15:02:53] PHP Notice:  Use of undefined constant gsbc - assumed 'gsbc' in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 4
+[08-Aug-2016 15:02:53] PHP Notice:  Use of undefined constant ycex - assumed 'ycex' in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 6
+[08-Aug-2016 15:02:53] PHP Notice:  Use of undefined constant wcyq - assumed 'wcyq' in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 6
+[08-Aug-2016 15:03:00] PHP Notice:  Use of undefined constant gsbc - assumed 'gsbc' in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 4
+[08-Aug-2016 15:03:00] PHP Notice:  Undefined index:  gsbc in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 4
+[11-Aug-2016 18:39:09] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[14-Aug-2016 23:02:23] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[21-Aug-2016 22:45:21] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[25-Aug-2016 18:18:34] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[21-Sep-2016 22:08:42] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[27-Sep-2016 03:51:51] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[02-Oct-2016 10:49:51] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[13-Oct-2016 12:47:16] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[20-Oct-2016 13:33:01] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[27-Oct-2016 10:44:46] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[03-Nov-2016 19:38:58] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[12-Nov-2016 18:18:27] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[22-Nov-2016 21:46:26] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[03-Dec-2016 00:10:45] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[13-Dec-2016 23:22:16] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[25-Dec-2016 07:44:51] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[06-Jan-2017 16:03:55] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[19-Jan-2017 10:50:28] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[30-Jan-2017 19:36:58] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[04-Feb-2017 03:46:41] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[04-Feb-2017 03:46:42] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[04-Feb-2017 03:46:43] PHP Notice:  Undefined index:  v2fb711 in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[10-Feb-2017 04:10:29] PHP Parse error:  syntax error, unexpected '<' in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1
+[10-Feb-2017 04:11:44] PHP Parse error:  syntax error, unexpected '<' in /home/ivanucom/public_html/naderdabit.me/img/xml.php on line 1

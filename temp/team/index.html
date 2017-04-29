@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
+	<script src="teambuilder.js"></script>
+</head>
+
+<style>
+
+body {
+	margin:0;
+	padding-bottom:50px;
+}
+
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+.teamwrapper {
+	width:746px;
+	margin: 0 auto;
+	
+}
+
+.teamcontainer {
+	padding-left:20px;
+}
+
+
+.teamthird {
+	width:100px;
+	margin-right:20px;
+	float:left;
+
+}
+
+.teamthird img {
+	display: block;
+	width:100px;
+	cursor:pointer;
+}
+
+
+.teamhalf {
+	width:220px;
+	margin-right:20px;
+	float:left;
+}
+
+.teamhalf img {
+	display: block;
+	width:220px;
+	cursor:pointer;
+}
+
+.clearfix {
+	clear:both;
+}
+
+.teamhovercontainer {
+	position: relative;
+	overflow:hidden;
+	background-color: black;
+	margin-top:20px;
+}
+
+.teamhoveroverlay {
+	position:absolute;
+	height:60px;
+	width:100%;
+}
+
+.teamhovername {
+	color: white;
+	font-size:20px;
+	padding-left:0px;
+	margin:0;
+	opacity:0;
+	font-weight:300;
+}
+
+.image:after {
+    content:'\A';
+    position:absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background:rgba(0,0,0,0.6);
+    opacity:0;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.row1 {
+	float:left;
+	width:240px;
+}
+
+.row2 {
+	float:left;
+	width:246px;
+}
+
+.row3 {
+	float:left;
+	width:246px;
+}
+
+.floater {
+	float:left;
+}
+
+.teamdrilldownwrapper {
+	width: 706px;
+	margin:0 auto;
+	height:0px;
+	margin-top:20px;
+}
+
+.teamdrilldowncontainer {
+	opacity:0;
+}
+
+.drilldownheader {
+	font-size:18px;
+	margin:0;
+
+}
+
+.drilldowncopy {
+	padding-left:330px;
+}
+
+.drilldownposition {
+	margin:0;
+	color:#777;
+	margin-top:4px;
+	font-size:14px;
+	font-weight:300;
+}
+
+.drilldownquote {
+	border-left:3px solid #75b8e5;
+	padding-top:15px;
+	padding-bottom:15px;
+	margin-top:10px;
+	font-size:14px;
+	
+}
+
+.drilldownquote p {
+	margin:0;
+	padding-left:20px;
+	color:#75b8e5;
+}
+
+.drilldownmaincopy {
+	margin:0;
+	color:#777;
+	font-size:12px;
+	margin-top:5px;
+}
+
+.fa {	
+	margin-top: 15px;
+ 	color: #73b8e5;
+ 	font-size: 20px;
+ 	margin-right: 15px
+}
+
+.visible {
+	transition:0.5s linear all;
+	-webkit-transition: 0.5s linear all;
+}
+
+.visible.ng-enter {
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.visible.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.visible.ng-leave {
+  opacity:1;
+}
+
+/* The finishing CSS styles for the enter animation */
+.visible.ng-leave.ng-leave-active {
+  opacity:0;
+}
+
+</style>
+
+
+<body ng-app="teambuilder" ng-controller="TeamController">
+
+
+
+<div class="clearfix"></div>
+
+<div class="teamwrapper" open-team>
+	
+	<div class="teamdrilldownwrapper" >
+		<div class="teamdrilldowncontainer" >
+			<div style="position:relative" ng-if="show && visible" class="visible">	
+				<img ng-src="{{img}}" alt="" style="width:300px;display:block;position:absolute;">
+				<div class="drilldowncopy">
+					<p class="drilldownheader">{{name}}</p>
+					<p class="drilldownposition">{{title}}</p>
+					<div class="drilldownquote">
+						<p>
+							{{quote}}
+						</p>
+					</div>
+					<p class="drilldownmaincopy">{{bio}}</p>
+					<div>
+						<div style="float:left;">
+							<a ng-href="mailto:{{email}}" >
+								<i class="fa fa-envelope"></i>
+							</a>
+						</div>
+						<div style="float:left;">
+							<a ng-href="{{linkedinUrl}}" target="_blank" ng-if="linkedinUrl">
+								<i class="fa fa-linkedin"></i>
+							</a>
+						</div>
+						<div style="float:left;" ng-if="spotify" >
+							<a ng-href="{{spotify}}" target="_blank">
+								<i class="fa fa-spotify"></i>
+							</a>
+						</div>
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div style="width:746px;margin:0">
+		<div class="teamcontainer">
+			<div class="row1">
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('robert')">
+						<img src="roberts.png" alt="Robert Reader">		
+					</div>
+				</div>
+
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('linell')">
+						<img src="linells.png" alt="Linell Bonnette">
+					</div>
+				</div>
+
+				<div class="teamhalf">
+					<div class="teamhovercontainer" ng-click="openTeam('nick')">
+						<img src="nickl.png" alt="Nick Peterman">
+					</div>
+				</div>
+
+				<div class="teamhalf">
+					<div class="teamhovercontainer" ng-click="openTeam('leslie')">
+						<img src="lesliel.png" alt="Leslie Ortego">		
+					</div>
+				</div>	
+
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('isaac')">
+						<img src="isaacs.png" alt="Isaac ">
+					</div>
+				</div>
+
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('')">
+						<img src="avatar.png" alt="">
+					</div>
+				</div>
+
+				
+
+				
+
+			</div>
+
+			<!-- END ROW 1 --> 
+			<div class="floater">
+				<div class="teamhalf">
+					<div class="teamhovercontainer" ng-click="openTeam('russ')">
+						<img src="russl.png" alt="Russ Davis">
+					</div>
+				</div>
+			</div>
+
+			<div class="floater">
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('joy')">
+						<img src="joys.png"  alt="Joy Smithson">
+					</div>
+				</div>
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('hector')">
+						<img src="hectors.png" alt="Hector Boldo">
+					</div>
+				</div>
+			</div>
+
+			<div class="floater">
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('ellen')">
+						<img src="ellens.png" alt="Ellen Beillman">
+					</div>
+				</div>
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('richard')">
+						<img src="richard2s.png" alt="Richard ">
+					</div>
+				</div>
+			</div>
+
+			<div class="floater">
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('nader')">
+						<img src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/5/005/0a8/120/1b3ec24.jpg" alt="Nader Dabit">
+					</div>			
+				</div>
+					
+				<div class="clearfix"></div>
+				
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('logan')">
+						<img src="logans.png" alt="Loagan Granberry">				
+					</div>
+				</div>	
+			</div>
+			
+			<div class="floater">
+				<div class="teamhalf">
+					<div class="teamhovercontainer" ng-click="openTeam('josh')">
+						<img src="joshl.png" alt="Josh Deere">				
+					</div>
+				</div>	
+			</div>
+
+			<div class="floater">
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('maryann')">
+						<img src="avatar.png" alt="MaryAnn">
+					</div>
+				</div>
+
+				<div class="clearfix"></div>
+
+				<div class="teamthird">
+					<div class="teamhovercontainer" ng-click="openTeam('terry')">
+						<img src="1s.png" alt="Terry">
+					</div>
+				</div>
+			</div>
+
+			<div class="floater">
+				<div class="teamhalf">
+					<div class="teamhovercontainer" ng-click="openTeam('lee')">
+						<img src="leel.png" alt="Lee Johnson">			
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="floater">
+				<div class="teamhalf">
+					<div class="teamhovercontainer" ng-click="openTeam('blake')">
+						<img src="blakel.png" alt="Blake Haller">
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+</div>
+<script>
+
+	$('.teamhovercontainer').append('<div class="teamhoveroverlay"></div>');
+
+	var items = document.getElementsByClassName("teamhovercontainer");
+
+	$('.teamhovercontainer').hover(function() {
+		// TweenMax.lagSmoothing(0);
+		var allImg = '.teamhovercontainer img'
+
+		TweenMax.to(allImg, .3, {opacity:.6})
+		
+		var myImg = $(this).find('img')
+		
+		TweenMax.to(myImg, .3, {autoAlpha:1})
+		
+		// var toMove = $(this).find('.teamhoveroverlay');
+		// toMove.empty();
+		// var nameis = $(this).find('img').attr('alt');
+		// toMove.append('<p class="teamhovername"><img src="open.png" style="float:right;margin-top:26px;margin-right:4px;height:24px;width:24px;" /></p>')
+
+		// TweenMax.to(toMove, .15, {marginTop:-60})
+		// TweenMax.to('.teamhovername', .15, {autoAlpha:1, delay:.25})
+
+	}, function() {
+		var toMove = $(this).find('.teamhoveroverlay');
+		TweenMax.to(toMove, .4, {marginTop:0});
+	});
+
+	$('.teamwrapper').mouseleave(function() {
+		$('.teamhovercontainer img').animate({
+			opacity: 1.0
+		}, 300)
+	})
+	
+
+</script>
+	
+</body>
+</html>

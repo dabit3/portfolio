@@ -1,0 +1,208 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+	
+	<div class="blog-content">
+		<h3>Angular Directives with jQuery - Part 1</h3>
+		<p class="lighttext"><small><a href="http://codepen.io/dabit3/pen/KwboPK" target="_blank">Completed example</a></small></p>
+		<p class="lighttext topmargin">I often get asked how to manipulate the dom in Angular using jqLite / jQuery, and after looking online and not coming across much that resonated with me, I decided to write a quick post on how I do it when I run into this problem. <small>(note: this may or may not be the best way to solve this or any specific problem, I will leave that up to you to decide.)</small></p>
+
+		<p class="lighttext topmargin">This directive will be a nav that will scroll down the page when one of the three links are clicked.</p>
+
+		<p class="lighttext topline topmargin">First, set up your blank directive:</p>
+		<br />
+		<p class="lighttext">HTML</p>
+		
+		<pre id="presourcecode_551801" class="displaysourcecode" >
+		&lt;div&gt;
+
+		&lt;p class="about"&gt;ABOUT&lt;/p&gt;
+		&lt;p class="team"&gt;TEAM&lt;/p&gt;
+		&lt;p class="contact"&gt;CONTACT&lt;/p&gt;
+
+		&lt;/div&gt;
+		</pre>
+
+		<p class="lighttext">JavaScript</p>
+		<pre  >
+		angular.module('myApp', [])
+
+		.directive('myDirective', myDirective)
+
+		function myDirective() {
+		 return {
+		   
+		 }
+		}
+
+		</pre>
+
+		<p class="lighttext topline topmargin">Now, we set our directive to be an attribute and declare our link function (which has not yet been defined):</p>
+		<br />
+
+		<p class="lighttext">HTML</p>
+		
+		<pre id="presourcecode_551801" class="displaysourcecode" >
+		&lt;div&gt;
+
+		&lt;p class="about"&gt;ABOUT&lt;/p&gt;
+		&lt;p class="team"&gt;TEAM&lt;/p&gt;
+		&lt;p class="contact"&gt;CONTACT&lt;/p&gt;
+
+		&lt;/div&gt;
+		</pre>
+
+		<p class="lighttext">JavaScript</p>
+		<pre  >
+		angular.module('myApp', [])
+
+		.directive('myDirective', myDirective)
+
+		function myDirective() {
+			return {
+			   restrict: 'A',
+			   link: clicker
+			 }
+		}
+
+		</pre>
+
+		<p class="lighttext topline topmargin">Next, we define our clicker function and store our three links into variables:</p>
+		<br />
+
+		<p class="lighttext">HTML</p>
+		
+		<pre id="presourcecode_551801" class="displaysourcecode" >
+		&lt;div&gt;
+
+		&lt;p class="about"&gt;ABOUT&lt;/p&gt;
+		&lt;p class="team"&gt;TEAM&lt;/p&gt;
+		&lt;p class="contact"&gt;CONTACT&lt;/p&gt;
+
+		&lt;/div&gt;
+		</pre>
+
+		<p class="lighttext">JavaScript</p>
+		<pre  >
+		angular.module('myApp', [])
+		.directive('myDirective', myDirective);
+
+		function myDirective() {           
+		  return {
+		   restrict: 'A',
+		   link: clicker
+		 }
+
+		function clicker() {
+			
+			var about = $('.about');
+			var team = $('.team');
+			var contact = $('.contact');
+
+			}
+		}
+
+		</pre>
+
+		<p class="lighttext topline topmargin">Now, we add the click function to the three links:</p>
+		<br />
+
+		<p class="lighttext">HTML</p>
+		
+		<pre id="presourcecode_551801" class="displaysourcecode" >
+		&lt;div&gt;
+
+		&lt;p class="about"&gt;ABOUT&lt;/p&gt;
+		&lt;p class="team"&gt;TEAM&lt;/p&gt;
+		&lt;p class="contact"&gt;CONTACT&lt;/p&gt;
+
+		&lt;/div&gt;
+		</pre>
+
+		<p class="lighttext">JavaScript</p>
+		<pre>
+		angular.module('myApp', [])
+		.directive('myDirective', myDirective);
+
+		function myDirective() {           
+		  return {
+		   restrict: 'A',
+		   link: clicker
+		 }
+
+		function clicker() {
+		
+		  var about = $('.about');
+		  var team = $('.team');
+		  var contact = $('.contact');
+
+		  $(about).bind('click', function() {
+		  	$("body, html").animate({scrollTop: 0}, "slow");			
+		  })
+
+		  $(team).bind('click', function() {
+			  $("body, html").animate({scrollTop: 500}, "slow");			
+		  })
+
+		  $(contact).bind('click', function() {
+			  $("body, html").animate({scrollTop: 1000}, "slow");			
+		  })
+		 }
+		}
+		</pre>
+
+		<p class="lighttext topline topmargin">Finally, we add our directive to our html:</p>
+		<br />
+
+		<p class="lighttext">HTML</p>
+		
+		<pre id="presourcecode_551801" class="displaysourcecode" >
+		&lt;div my-directive&gt;
+
+		&lt;p class="about"&gt;ABOUT&lt;/p&gt;
+		&lt;p class="team"&gt;TEAM&lt;/p&gt;
+		&lt;p class="contact"&gt;CONTACT&lt;/p&gt;
+
+		&lt;/div&gt;
+		</pre>
+
+		<p class="lighttext">JavaScript</p>
+		<pre  >
+		angular.module('myApp', [])
+		.directive('myDirective', myDirective);
+
+	  function myDirective() {           
+	  return {
+	   restrict: 'A',
+	   link: clicker
+	   }
+
+	  function clicker() {
+		
+		var about = $('.about');
+		var team = $('.team');
+		var contact = $('.contact');
+
+		$(about).bind('click', function() {
+			$("body, html").animate({scrollTop: 0}, "slow");			
+		})
+
+		$(team).bind('click', function() {
+			$("body, html").animate({scrollTop: 500}, "slow");			
+		})
+
+		$(contact).bind('click', function() {
+			$("body, html").animate({scrollTop: 1000}, "slow");			
+		})
+	  }
+	  }
+		</pre>
+
+		<p class="lighttext topmargin"><small><a href="http://codepen.io/dabit3/pen/KwboPK" target="_blank">Completed example</a></small></p>
+		<a href="mailto:dabit3@gmail.com">questions? contact me</a>
+		<br /><br /><br />
+
+
+
+	</div>
+	</section>
+</div>

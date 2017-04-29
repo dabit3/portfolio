@@ -1,0 +1,47 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>Ionic Framework | Page Five</h3>
+			<h4>Adding ui to our app.</h4>
+			<br />
+			<p>Adding refresh button</p>
+			<h5><a href="http://ionicframework.com/docs/components/#buttons" target="_blank">Ionic documentation for buttons</a></h5>
+			<p>Below h1 title, add the following:</p>
+			<div class="code">
+				<section>
+					&lt;button class="button icon ion-refresh" ng-click="refresh()"&gt;&lt;/button&gt;
+				</section>
+			</div>
+			<br />
+			<p>Adding layout</p>
+			<p>Remove this code</p>
+			<div class="code">
+				<section>
+				&lt;h1&gt;Content Here&lt;/h1&gt;
+				</section>
+			</div>
+			<br />
+			<p>Replace with this:</p>
+			<h5><a href="http://ionicframework.com/docs/components/#cards" target="_blank">Ionic documentation for cards</a></h5>
+			<div class="code">
+				<section>
+					&lt;div class="card list"&gt;	<br />
+					&nbsp;&lt;div class="item item-avatar-left"&gt;<br />
+					&nbsp;&nbsp;&lt;img src="" alt=""&gt; <br />
+					&nbsp;&nbsp;&lt;h2&gt;Name&lt;/h2&gt;<br />
+					&nbsp;&nbsp;&lt;p&gt;Content&lt;/p&gt;<br />
+					&nbsp;&lt;/div&gt;<br />
+					&lt;/div&gt;	<br />
+					&lt;div class="item item-body"&gt; <br />
+					&nbsp;&lt;h1&gt;Title&lt;/h1&gt; <br />
+					&nbsp;&lt;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, quidem. Saepe ducimus, deserunt quam perspiciatis eius dolores voluptatem odit minus voluptatibus iure praesentium porro et consequatur corrupti necessitatibus temporibus asperiores?&lt;/p&gt;<br />
+					&lt;/div&gt;
+				</section>
+			</div>
+
+			<br />
+			<a ui-sref="ionicfour"><div class="blog-nav" ng-click="ScrollTop()">prev</div></a>
+			<a ui-sref="ionicsix"><div class="blog-nav" ng-click="ScrollTop()">next</div></a>	
+		</div>
+	</section>
+</div>

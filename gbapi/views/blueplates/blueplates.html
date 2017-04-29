@@ -1,0 +1,100 @@
+<div>
+	<div style="margin-top:20px;">
+		<a href="#/menu" >Back to menu</a>
+	</div>
+	<h5>{{ city.charAt(0).toUpperCase() + city.slice(1) }} Blue Plates</h5>
+
+	<button class="btn blue" ng-click="makeHattiesburg()">Hattiesburg</button>
+	<button class="btn blue" ng-click="makeMadison()">Madison</button>
+	<button class="btn blue" ng-click="makeFlowood()">Flowood</button>
+	<button class="btn blue" ng-click="makeBrookhaven()">Brookhaven</button>
+
+	<div class="hattiesburg" ng-show="city == 'hattiesburg' " ng-controller="BluePlateHattiesburg">
+		<div style="margin:20px 0px;">
+			<a href="#/blueplates/hattiesburg/new" class="btn blue">Create New Hattiesburg BluePlate</a>
+			</div>
+		<ul ng-if="items" class="collection with-header">
+			<li ng-repeat="item in items" class="collection-item">
+				<div>
+					<a href="#/blueplates/hattiesburg/{{item.id}}">{{item.name}}</a>
+					<a style="cursor:pointer;" class="secondary-content" ng-click="deleteBlueplate(item, item.id); ">
+						<i class="material-icons" style="color: #f44336 !important">delete</i>
+					</a>
+				</div>
+			</li>        
+		</ul>
+		<div ng-if="!items" style="text-align:center;padding: 50px 0px;">
+			<h4 class="grayspinner">
+				<i class="fa fa-spinner spinning"></i>
+			</h4>
+		</div>
+		<div style="padding:30px 0px;" ng-if="items.length == 0">No menu items, please add menu items by clicking button.</div>
+	</div>
+
+	<div class="flowood" ng-show="city == 'flowood' " ng-controller="BluePlateFlowood">
+			<div style="margin:20px 0px;">
+			<a href="#/blueplates/flowood/new" class="btn blue">Create New Flowood BluePlate</a>
+			</div>
+		<ul ng-if="items" class="collection with-header">
+			<li ng-repeat="item in items" class="collection-item">
+				<div>
+					<a href="#/blueplates/flowood/{{item.id}}">{{item.name}}</a>
+					<a style="cursor:pointer;" class="secondary-content" ng-click="deleteBlueplate(item, item.id); ">
+						<i class="material-icons" style="color: #f44336 !important">delete</i>
+					</a>
+				</div>
+			</li>        
+		</ul>
+		<div ng-if="!items" style="text-align:center;padding: 50px 0px;">
+			<h4 class="grayspinner">
+				<i class="fa fa-spinner spinning"></i>
+			</h4>
+		</div>
+		<div style="padding:30px 0px;" ng-if="items.length == 0">No menu items, please add menu items by clicking button.</div>
+	</div>
+
+	<div class="madison" ng-show="city == 'madison' " ng-controller="BluePlateMadison">
+			<div style="margin:20px 0px;">
+			<a href="#/blueplates/madison/new" class="btn blue">Create New Madison BluePlate</a>
+			</div>
+		<ul ng-if="items" class="collection with-header">
+			<li ng-repeat="item in items" class="collection-item">
+				<div>
+					<a href="#/blueplates/madison/{{item.id}}">{{item.name}}</a>
+					<a style="cursor:pointer;" class="secondary-content" ng-click="deleteBlueplate(item, item.id); ">
+						<i class="material-icons" style="color: #f44336 !important">delete</i>
+					</a>
+				</div>
+			</li>        
+		</ul>
+		<div ng-if="!items" style="text-align:center;padding: 50px 0px;">
+			<h4 class="grayspinner">
+				<i class="fa fa-spinner spinning"></i>
+			</h4>
+		</div>
+		<div style="padding:30px 0px;" ng-if="items.length == 0">No menu items, please add menu items by clicking button.</div>
+	</div>
+
+	<div class="brookhaven" ng-show="city == 'brookhaven' " ng-controller="BluePlateBrookhaven">
+			<div style="margin:20px 0px;">
+			<a href="#/blueplates/brookhaven/new" class="btn blue">Create New Brookhaven BluePlate</a>
+			</div>
+		<ul ng-if="items" class="collection with-header">
+			<li ng-repeat="item in items" class="collection-item">
+				<div>
+					<a href="#/blueplates/brookhaven/{{item.id}}">{{item.name}}</a>		
+					<a style="cursor:pointer;" class="secondary-content" ng-click="deleteBlueplate(item, item.id); ">
+						<i class="material-icons" style="color: #f44336 !important">delete</i>
+					</a>
+				</div>
+			</li>        
+		</ul>
+		<div ng-if="!items" style="text-align:center;padding: 50px 0px;">
+			<h4 class="grayspinner">
+				<i class="fa fa-spinner spinning"></i>
+			</h4>
+		</div>
+		<div style="padding:30px 0px;" ng-if="items.length == 0">No menu items, please add menu items by clicking button.</div>
+	</div>
+
+</div>

@@ -1,0 +1,101 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>Ionic Framework | Page Six</h3>
+			<h4>Adding data to our app.</h4>
+			<h5><a href="https://public-api.wordpress.com/rest/v1/freshly-pressed" target="_blank">Link to freshly pressed api</a></h5>
+			<p>Open app.js, register the FreshlyPressed service and add the click function:</p>
+			<div class="code">
+				<section>
+					App.service("FreshlyPressed", ["$http", FreshlyPressed]);
+					<br />.... <br />
+					function FreshlyPressed($http) { <br />
+						&nbsp;this.getBlogs = function($scope) { <br />
+						&nbsp;&nbsp;	$http.jsonp('https://public-api.wordpress.com/rest/v1/freshly-pressed?callback=JSON_CALLBACK') <br />
+							&nbsp;	&nbsp;.success(function(result) { <br />
+								&nbsp;&nbsp;&nbsp;		$scope.posts = result.posts; <br />
+							&nbsp;&nbsp;	}) <br />
+						&nbsp;} <br />
+					}
+				</section>
+			</div>
+			<br />
+			<p>Update controller to receive data from the FreshlyPressed Service:</p>
+			<div class="code">
+				<section>
+					function AppCtrl($scope, FreshlyPressed) { <br />
+						&nbsp;	$scope.posts = [];  <br />
+						&nbsp;	$scope.refresh = function() {  <br />
+						&nbsp;&nbsp;		FreshlyPressed.getBlogs($scope);  <br />
+						&nbsp;	}  <br />
+					}
+				</section>
+			</div>
+			<br />
+			<p>Update index.html to display data:</p>
+			<div class="code">
+				<section>
+					&lt;div class="card list" ng-repeat="post in posts"&gt; <br />
+					&nbsp;	&lt;div class="item item-avatar-left"&gt; <br />
+					&nbsp;&nbsp;		&lt;img ng-src="&#123;&nbsp;&#123;post.author.avatar_URL&#125;&#125;" alt=""&gt; <br />
+					&nbsp;&nbsp;		&lt;h2&gt; &#123;&nbsp;&#123;post.author.nice_name}}&lt;/h2&gt; <br />
+					&nbsp;&nbsp;		&lt;p&gt;&lt;a href="&#123;&nbsp;&#123; post.author.URL &#125;&#125;"&gt;&#123;&#123; post.author.URL &#125;&#125;&lt;/a>&lt;/p&gt; <br />
+					&nbsp;	&lt;/div&gt; <br />
+					&nbsp;	&lt;div class="item item-body"&gt; <br />
+					&nbsp;&nbsp;		&lt;h1&gt;&#123;&nbsp;&#123;post.title&#125;&#125;&lt;/h1&gt; <br />
+					&nbsp;&nbsp;		&lt;div ng-bind-html="post.content"&gt;&lt;/div&gt; <br />
+					&nbsp;	&lt;/div&gt;<br />
+					&lt;/div&gt;<br />
+				</section>
+			</div>
+			<br />
+			<p>Implement pull to refresh:</p>
+			<div class="code">
+				<section>
+					&lt;ion-refresh on-refresh="refresh()"&gt;&lt;/ion-refresh&gt;
+				</section>
+			</div>
+			<br />
+			<p>To let ionic know when refresh is complete, add this to the end of the getBlogs function:</p>
+			<h5><a href="http://ionicframework.com/docs/api/directive/ionRefresher/" target="_blank">Documentation for Ionic refresher.</a></h5>
+			<div class="code">
+				<section>
+					$scope.$broadcast("scroll.refreshComplete");
+				</section>
+			</div>
+			<br />
+			<p>Use ng-show to show pull to refresh:</p>
+			<div class="code">
+				<section>
+					ng-show="!posts.length"
+				</section>
+			</div>
+			<br />
+			<p>Add logo, replace text between H1 with image source:</p>
+			<div class="code">
+				<section>
+					&lt;img src="img/logo.png"&gt;
+				</section>
+			</div>
+			<br />
+			<p>Add platform:</p>
+			<div class="code">
+				<section>
+					$ ionic platform ios<br />
+					$ ionic build ios<br />
+					$ ionic emulate ios
+				</section>
+			</div>
+			<br />
+			<h5><a href="https://github.com/dabit3/freshlypressed" target="_blank">view code on github</a></h5>
+
+		
+			<h4><a href="http://www.twitter.com/dabit3" target="_blank">@dabit3</a></h4>
+
+
+				<br />
+			<a ui-sref="ionicfive"><div class="blog-nav" ng-click="ScrollTop()">prev</div></a>
+			
+		</div>
+	</section>
+</div>

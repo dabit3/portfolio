@@ -1,0 +1,56 @@
+<div ng-controller="BlogCtrl" class="main-container">
+	<section class="blog-container">
+		<div class="blog-content">
+			<h3>Ionic Framework | Page Two</h3>
+			<h4>Getting started with Ionic.</h4>
+			<p>Installation </p><br />
+			<p>1. Install Node.js</p><br />
+			<p>2. From the terminal, run the following command to install Cordova &amp; Ionic:</p>
+			<div class="code">
+				<section>
+				$ npm install -g cordova ionic
+				</section>
+			</div>
+			<br />
+			<p>3. Install IOS &amp; Android SDK (optional)</p>
+			<br />
+			<p>4. Create Ionic project from the command line:</p>
+			<div class="code">
+				<section>
+						$ ionic start myApp sidemenu <span class="comment">// install project with side menu</span><br />
+						$ ionic start myApp blank	<span class="comment">// install blank project</span><br />
+						$ ionic start myApp tabs <span class="comment">// install project with tabs</span>
+				</section>
+			</div>
+			<br />
+			<p>5. Change into directory</p>
+			<div class="code">
+				<section>
+				$ cd myapp
+				</section>
+			</div>
+			<br />
+			<p>6. Add desired platforms: (optional), Note: unless you are on MacOS, leave out the iOS platform:</p>
+			<div class="code">
+				<section>
+					$ ionic platform ios <span class="comment">// add ios platform build</span><br />
+					$ ionic platform android <span class="comment">// add android platform build</span>
+				</section>
+			</div>
+			<br />
+			<p>7. Test it out:</p>
+			<div class="code">
+				<section>
+				$ ionic serve <span class="comment">// web browser</span><br />
+				$ ionic build ios <span class="comment">// IOS</span><br />
+				$ ionic emulate ios<br />
+				$ ionic build android <span class="comment">// Android</span> <br />
+				</section>
+			</div>
+
+			<br />
+			<a ui-sref="ionicone"><div class="blog-nav" ng-click="ScrollTop()">prev</div></a>
+			<a ui-sref="ionicthree"><div class="blog-nav" ng-click="ScrollTop()">next</div></a>
+		</div>
+	</section>
+</div>

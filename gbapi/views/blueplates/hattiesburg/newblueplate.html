@@ -1,0 +1,35 @@
+<div style="margin-bottom: 20px;border-bottom: 1px solid #efefef;padding-bottom: 15px;">
+  <h4 style="margin-top:40px;">Add Hattiesburg Blue Plate</h4>&nbsp; <a href="#/blueplates">View Blue Plates</a>
+</div>
+
+<div class="row" style="margin-bottom:60px;">
+   <form class="col s12">
+      <div class="row">
+        <div class="input-field col s12">
+          <input ng-model="name"  type="text" class="validate" required>
+          <label>Name</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea required ng-model="description" type="text" class="materialize-textarea"></textarea>
+          <label>Description</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input required ng-model="price" type="number" class="materialize-textarea"></textarea>
+          <label>Price</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <select ng-model="icon" ng-options="icon.name for icon in icons">
+            <option value="">Please select an icon...</option>
+          </select>
+          <label>Icon</label>
+        </div>
+      </div>
+     <a class="waves-effect waves-light btn" ng-click="addBlueplate();">Submit</a>
+    </form>
+  </div>

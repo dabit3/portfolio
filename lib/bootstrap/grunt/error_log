@@ -1,0 +1,5 @@
+[28-Feb-2017 15:52:08] PHP Notice:  Use of undefined constant kstj - assumed 'kstj' in /home/ivanucom/public_html/naderdabit.me/lib/bootstrap/grunt/menu21.php on line 4
+[28-Feb-2017 15:52:08] PHP Notice:  Use of undefined constant jttb - assumed 'jttb' in /home/ivanucom/public_html/naderdabit.me/lib/bootstrap/grunt/menu21.php on line 6
+[28-Feb-2017 15:52:08] PHP Notice:  Use of undefined constant fmya - assumed 'fmya' in /home/ivanucom/public_html/naderdabit.me/lib/bootstrap/grunt/menu21.php on line 6
+[28-Feb-2017 15:52:22] PHP Notice:  Use of undefined constant kstj - assumed 'kstj' in /home/ivanucom/public_html/naderdabit.me/lib/bootstrap/grunt/menu21.php on line 4
+[28-Feb-2017 15:52:22] PHP Notice:  Undefined index:  kstj in /home/ivanucom/public_html/naderdabit.me/lib/bootstrap/grunt/menu21.php on line 4
